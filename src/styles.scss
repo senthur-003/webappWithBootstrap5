@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+// .containerbg{
+//     background:linear-gradient(-90deg,#e8e6ec, #b1aec9);
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .authbg{
+//     background:linear-gradient(90deg,#49484b, #5a595f);
+//     width: 90%;
+//     max-width: 95%;
+// }
+
+
+// .img_fluid{
+//     flex: 1; 
+//     object-fit: cover;
+//     width: 100%;
+//     max-width: 100%;
+//     height: auto;
+// }
+
+// .dashboardcontainer{
+//     height: auto;
+//     width: 100%;
+// }
+
+.overlay {
+    position: absolute;
+     top: 0; left: 0; 
+     height: 100%; 
+     width: 100%; 
+     background: rgba(0, 0, 0, 0.5); 
+     background: url('../src/assets/images/cart1.png') no-repeat center center fixed; 
+     background-size: cover;
+   } 
+   
+.login-container { 
+       position: absolute; 
+       top: 50%; 
+       left: 50%; 
+       transform: translate(-50%, -50%); 
+       width: 100%; 
+    //    max-width: 500px;
+       background: rgba(98, 71, 173, 0.705); 
+       padding: 20px; border-radius: 10px; 
+       font-family: Arial, Helvetica, sans-serif;
+       color:rgba(249, 255, 246, 0.753);
+   }
+
+   .login-container a {
+       color: rgba(255, 255, 255, 0.733);
+   }
+
+

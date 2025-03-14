@@ -1,0 +1,20 @@
+
+
+
+
+
+<div class="container login-container" style=" max-width: 500px;">
+    <div class="text-center mb-4"> <img src="../../../assets/images/tcs_logo.png" alt="Logo" style="width: 100px;">
+    </div>
+    <div class="mb-3"> <label for="email" class="form-label">Email address</label> <input type="email"
+            class="form-control" id="email" aria-describedby="emailHelp"> </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+    </div>
+    <button type="submit" class="btn btn-primary w-100 mb-3" (click)="login()">Login</button>
+    <div class="mb-3 d-flex flex-row justify-content-between">
+        <a routerLink="../register">Register</a>
+        <a routerLink="../forgot">forgot password</a>
+    </div>
+</div>
