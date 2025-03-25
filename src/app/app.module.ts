@@ -9,6 +9,7 @@ import { AuthRoutingModule } from '../app/auth/auth-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSliderModule } from '@angular-slider/ngx-slider'; 
 
+
 @NgModule({
   declarations: [
     AppComponent,

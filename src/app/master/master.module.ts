@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MasterRoutingModule } from './master-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { TrailCodeComponent } from './trail-code/trail-code.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    TrailCodeComponent
   ],
   imports: [
     CommonModule,

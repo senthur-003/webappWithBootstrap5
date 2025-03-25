@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostBinding, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Options, ChangeContext } from '@angular-slider/ngx-slider';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -11,7 +11,9 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class DashboardComponent implements AfterViewInit {
   @ViewChild('rangeSlider') rangeSlider: ElementRef | undefined;
-  view:number[] = [1,2,3,4,5,6,7,8,910,11,12,13,14];
+  @HostBinding('class.dark-mode') darkMode = false;
+
+  view: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 910, 11, 12, 13, 14];
   minValue: number = 20;
   maxValue: number = 80;
   sliderOptions: Options = {

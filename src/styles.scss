@@ -1,33 +1,105 @@
-/* You can add global styles to this file, and also import other style files */
-// .containerbg{
-//     background:linear-gradient(-90deg,#e8e6ec, #b1aec9);
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-// }
+/* src/styles.scss or src/app/app.component.scss */
 
-// .authbg{
-//     background:linear-gradient(90deg,#49484b, #5a595f);
-//     width: 90%;
-//     max-width: 95%;
-// }
+/* src/styles.scss or src/app/app.component.scss */
 
+/* src/app/app.component.scss */
 
-// .img_fluid{
-//     flex: 1; 
-//     object-fit: cover;
-//     width: 100%;
-//     max-width: 100%;
-//     height: auto;
-// }
+// Define your color variables
+$light-bg: #f9f9f9;
+$light-text: #333;
+$light-border: #ccc;
+$light-link: #007bff;
 
-// .dashboardcontainer{
-//     height: auto;
-//     width: 100%;
-// }
+$dark-bg: #222;
+$dark-text: #eee;
+$dark-border: #555;
+$dark-link: #6f42c1;
 
+:host {
+  background-color: $light-bg;
+  color: $light-text;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.dark-mode {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  /* General elements that should change color */
+  h1, h2, h3, h4, h5, h6 {
+    color: inherit; /* Inherit the color from the :host or .dark-mode */
+  }
+
+  p {
+    color: inherit;
+  }
+
+  a {
+    color: $light-link;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &.dark-mode {
+      color: $dark-link;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  div, nav, aside, main, section, article {
+    background-color: inherit; /* Inherit background from :host or .dark-mode */
+    color: inherit;
+    border-color: $light-border; /* Example border color */
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    &.dark-mode {
+      border-color: $dark-border;
+    }
+  }
+
+  /* Specific styling for the container (optional) */
+  .container {
+    background-color: inherit; /* Inherit background from :host or .dark-mode */
+    color: inherit;
+    border-color: $light-border; /* Example border color */
+    border-style: solid;
+    border-width: 1px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+    &.dark-mode {
+      border-color: $dark-border;
+    }
+  }
+
+  /* Example button */
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &.dark-mode {
+      background-color: #5a76a5;
+    }
+  }
+}
 .overlay {
     position: absolute;
      top: 0; left: 0; 
@@ -54,5 +126,51 @@
    .login-container a {
        color: rgba(255, 255, 255, 0.733);
    }
+   .light-mode {
+    background-color: white;
+    color: #333;
+    .card-body {
+      background-color: white; 
+      color: #333;
+    }
+    
+  }
+  
+  .dark-mode {
+    background-color: #333;
+    color: rgb(247, 242, 242); 
+    .card-body {
+      background-color: #333; 
+      color: #eee;
+    }
+  }
+
+  .theme-toggle-button {
+    opacity: 0.7; /* Set the desired transparency level (0.0 to 1.0) */
+    transition: opacity 0.3s ease; /* Optional: Add a transition for smoother effect */
+    border: none; /* Remove any default button border if you want */
+    background: none; /* Remove any default button background if you want */
+    cursor: pointer; /* Indicate it's clickable */
+  
+    &:hover {
+      opacity: 0.9; /* Optional: Slightly increase opacity on hover */
+    }
+  
+    /* You might want to adjust the color of the icons here if needed
+       to ensure they are visible against the background.
+       For example, if your background is dark, you might want white icons. */
+    i {
+      color: inherit; /* Inherit the current text color */
+    }
+  
+    &.dark-mode i.bi-brightness-high {
+      color: white; /* Example: Make light icon white in dark mode */
+    }
+  
+    &.light-mode i.bi-moon {
+      color: black; /* Example: Make dark icon black in light mode */
+    }
+  }
+  
 
 
