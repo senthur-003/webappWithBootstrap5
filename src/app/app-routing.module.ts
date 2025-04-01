@@ -5,6 +5,7 @@ import { AuthComponent } from './auth/auth.component';
 const routes: Routes = [
   {path:'auth',loadChildren:()=>import('../app/auth/auth.module').then(m=>m.AuthModule)},
   {path:'master',loadChildren:()=>import('../app/master/master.module').then(m=>m.MasterModule)},
+  {path:'admin',loadChildren:()=>import('../app/admin/admin.module').then(m=>m.AdminModule)},
   {path:'',component:AuthComponent,loadChildren:()=>import('../app/auth/auth.module').then(m=>m.AuthModule)},
 ];
 

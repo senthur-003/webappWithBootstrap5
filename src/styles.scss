@@ -100,6 +100,10 @@ $dark-link: #6f42c1;
     }
   }
 }
+.shopname {
+  font-family: Freehand471 BT;
+  font-size: 16px;
+} 
 .overlay {
     position: absolute;
      top: 0; left: 0; 
@@ -172,5 +176,55 @@ $dark-link: #6f42c1;
     }
   }
   
+  .footerbg{
+    max-height: 60px;
+    background:linear-gradient(-90deg,rgba(147, 152, 160, 0.849),rgba(90, 97, 96, 0.747));
+}
+
+
+$light-bg: #f9f9f9;
+$light-text: #333;
+$dark-bg: #222;
+$dark-text: #eee;
+
+:host { /* Targeting the host element of the component */
+  background-color: $light-bg;
+  color: $light-text;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &.dark-mode {
+    background-color: $dark-bg;
+    color: $dark-text;
+  }
+
+  h1 h2 h3 h4 h5 h6 {
+    transition: color 0.3s ease;
+  }
+
+  p {
+    transition: color 0.3s ease;
+  }
+
+  .button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+  
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#007bff, 10%);
+    }
+
+    &.dark-mode {
+      background-color: #3498db;
+      &:hover {
+        background-color: darken(#3498db, 10%);
+      }
+    }
+  }
+}
+
+
 
 

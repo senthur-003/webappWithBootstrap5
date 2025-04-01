@@ -7,14 +7,22 @@ import { AuthComponent } from './auth/auth.component';
 import { MasterComponent } from './master/master.component';
 import { AuthRoutingModule } from '../app/auth/auth-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxSliderModule } from '@angular-slider/ngx-slider'; 
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FooterbottomComponent } from './footerbottom/footerbottom.component';
+import { HeadertopComponent } from './headertop/headertop.component'; 
+import { AdminComponent } from './admin/admin.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    MasterComponent
+    MasterComponent,
+    FooterbottomComponent,
+    HeadertopComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +32,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     NgxSliderModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
