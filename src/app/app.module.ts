@@ -12,6 +12,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { FooterbottomComponent } from './footerbottom/footerbottom.component';
 import { HeadertopComponent } from './headertop/headertop.component'; 
 import { AdminComponent } from './admin/admin.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,9 @@ import { AdminComponent } from './admin/admin.component';
     AppRoutingModule,
     AuthRoutingModule,
     HttpClientModule,
-    NgxSliderModule
+    NgxSliderModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),

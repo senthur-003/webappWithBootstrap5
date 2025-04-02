@@ -10,7 +10,7 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  get(url: any) {
+  get(url: any):Observable<any> {
     return this.httpClient.get(url)
   }
   post(url: any, data: any) {
