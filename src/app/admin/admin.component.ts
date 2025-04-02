@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { AdminWebServiceService } from './admin-web-service.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,5 +8,14 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class AdminComponent {
   @HostBinding('class.dark-mode') darkMode = false;
+  menuList: any;
+  constructor(private adminSer:AdminWebServiceService){
 
+  }
+  ngOnInit(){
+    this.adminSer.getAdminMenu().subscribe((data:any)=>{
+     this.menuList = data.result;
+      
+    })
+  }
 }

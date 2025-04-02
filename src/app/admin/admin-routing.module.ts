@@ -6,9 +6,11 @@ import { userRoleGuard } from '../user-role.guard';
 
 
 const routes: Routes = [
-  {path:'',component:AdminComponent,children:[
-    {path:'dashboard',component:DashboardComponent,canActivate:[userRoleGuard]}
-  ]}
+  {
+    path: '', component: AdminComponent, children: [
+      { path: 'dashboard', component: DashboardComponent }
+    ]
+  }
 ];
 
 @NgModule({
